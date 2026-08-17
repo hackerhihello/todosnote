@@ -16,11 +16,13 @@ export default function DocsPage() {
       <header className="border-b">
         <div className="max-w-7xl mx-auto p-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="/">
-                <ArrowLeft className="h-5 w-5" />
-              </Link>
-            </Button>
+            <Link 
+              href="/"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9"
+            >
+              <ArrowLeft className="h-5 w-5" />
+              <span className="sr-only">Go back</span>
+            </Link>
             <h1 className="text-xl font-bold">API Documentation</h1>
           </div>
           <ThemeToggle />
