@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { query, mutation } from "./generated/server";
+import { query, mutation } from "./_generated/server";
 import { v } from "convex/values";
 
 export const getTodos = query({

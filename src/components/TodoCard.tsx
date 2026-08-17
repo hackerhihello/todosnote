@@ -70,17 +70,13 @@ export function TodoCard({ todo }: TodoCardProps) {
           </div>
         </div>
         <DropdownMenu>
-          {/* @ts-expect-error React 19 type issue */}
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon" className="-mr-2">
-              <MoreVertical className="h-4 w-4" />
-              <span className="sr-only">Open menu</span>
-            </Button>
+          <DropdownMenuTrigger className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9 -mr-2">
+            <MoreVertical className="h-4 w-4" />
+            <span className="sr-only">Open menu</span>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            {/* @ts-expect-error React 19 type issue */}
-            <DropdownMenuItem asChild>
-              <Link href={`/edit/${todo._id}`} className="cursor-pointer flex items-center">
+            <DropdownMenuItem>
+              <Link href={`/edit/${todo._id}`} className="cursor-pointer flex items-center w-full">
                 <Pencil className="mr-2 h-4 w-4" />
                 Edit
               </Link>
