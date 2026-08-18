@@ -16,8 +16,11 @@ export async function GET(request: Request) {
       return NextResponse.json(searchResults);
     }
 
-    const filter = searchParams.get("filter") as "All" | "Active" | "Completed" | undefined;
-    const sort = searchParams.get("sort") as "Newest First" | "Oldest First" | undefined;
+    const filterValue = searchParams.get("filter");
+    const sortValue = searchParams.get("sort");
+
+    const filter = filterValue ? (filterValue as "All" | "Active" | "Completed") : undefined;
+    const sort = sortValue ? (sortValue as "Newest First" | "Oldest First") : undefined;
 
     const todos = await convex.query(api.todos.getTodos, { filter, sort });
     return NextResponse.json(todos);

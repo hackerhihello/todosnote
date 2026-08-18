@@ -7,8 +7,12 @@
   },
   "servers": [
     {
+      "url": "https://todosnote.vercel.app",
+      "description": "Production server"
+    },
+    {
       "url": "/",
-      "description": "Current server"
+      "description": "Local server"
     }
   ],
   "components": {
