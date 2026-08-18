@@ -95,7 +95,7 @@
     "/api/todos": {
       "get": {
         "summary": "Get all Todos",
-        "description": "Fetch all todos with optional filtering, sorting, and searching.\n\n**cURL Example:**\n```bash\ncurl -X GET \"http://localhost:3000/api/todos\"\n```",
+        "description": "Fetch all todos with optional filtering, sorting, and searching.\n\n**cURL Example:**\n```bash\ncurl -X GET \"https://todosnote.vercel.app/api/todos\"\n```",
         "parameters": [
           {
             "name": "search",
@@ -142,7 +142,7 @@
       },
       "post": {
         "summary": "Create a new Todo",
-        "description": "Create a new todo by providing a title and priority.\n\n**cURL Example:**\n```bash\ncurl -X POST \"http://localhost:3000/api/todos\" \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\n           \"title\": \"Buy groceries\",\n           \"description\": \"Milk, Eggs, and Bread\",\n           \"priority\": \"High\"\n         }'\n```",
+        "description": "Create a new todo by providing a title and priority.\n\n**cURL Example:**\n```bash\ncurl -X POST \"https://todosnote.vercel.app/api/todos\" \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\n           \"title\": \"Buy groceries\",\n           \"description\": \"Milk, Eggs, and Bread\",\n           \"priority\": \"High\"\n         }'\n```",
         "requestBody": {
           "required": true,
           "content": {
@@ -163,7 +163,7 @@
     "/api/todos/{id}": {
       "get": {
         "summary": "Get a Todo by ID",
-        "description": "Fetch a specific todo using its ID.\n\n**cURL Example:**\n```bash\ncurl -X GET \"http://localhost:3000/api/todos/<YOUR_TODO_ID>\"\n```",
+        "description": "Fetch a specific todo using its ID.\n\n**cURL Example:**\n```bash\ncurl -X GET \"https://todosnote.vercel.app/api/todos/<YOUR_TODO_ID>\"\n```",
         "parameters": [
           {
             "name": "id",
@@ -189,7 +189,7 @@
       },
       "put": {
         "summary": "Update a Todo",
-        "description": "Update specific fields of a todo or mark it as completed.\n\n**cURL Example:**\n```bash\ncurl -X PUT \"http://localhost:3000/api/todos/<YOUR_TODO_ID>\" \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\"completed\": true}'\n```",
+        "description": "Update specific fields of a todo or mark it as completed.\n\n**cURL Example:**\n```bash\ncurl -X PUT \"https://todosnote.vercel.app/api/todos/<YOUR_TODO_ID>\" \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\"completed\": true}'\n```",
         "parameters": [
           {
             "name": "id",
@@ -218,7 +218,7 @@
       },
       "delete": {
         "summary": "Delete a Todo",
-        "description": "Permanently delete a specific todo.\n\n**cURL Example:**\n```bash\ncurl -X DELETE \"http://localhost:3000/api/todos/<YOUR_TODO_ID>\"\n```",
+        "description": "Permanently delete a specific todo.\n\n**cURL Example:**\n```bash\ncurl -X DELETE \"https://todosnote.vercel.app/api/todos/<YOUR_TODO_ID>\"\n```",
         "parameters": [
           {
             "name": "id",
